@@ -60,7 +60,7 @@ const projects: Project[] = [
       "Secciones limpias y reutilizables",
     ],
     links: [
-      { label: "Repositorio (pendiente)", href: "#" },
+      { label: "Repositorio", href: "https://github.com/RodrigoCT19/Portafolio_RCT.git" },
       { label: "Ver sitio", href: "/" },
     ],
   },

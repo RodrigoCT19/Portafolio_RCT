@@ -119,7 +119,7 @@ export default function ContactoPage() {
                 <div className="mt-6 space-y-4">
                   {/* Correo */}
                   <a
-                    href="mailto:rcotrinate@gmail.com?subject=Contacto%20desde%20tu%20portafolio&body=Hola%20Rodrigo%2C%0A%0AMe%20gustar%C3%ADa%20contactarte%20para%20conversar%20sobre%20un%20proyecto.%0A%0AGracias."
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=rcotrinate@gmail.com&su=Contacto%20-%20Portafolio%20RCT&body=Hola%20Rodrigo%2C"
                     className="group flex w-full flex-col gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white/85 transition hover:border-white/20 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                   >
                     <div className="flex min-w-0 items-center gap-3">

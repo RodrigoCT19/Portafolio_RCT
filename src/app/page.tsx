@@ -57,7 +57,7 @@ export default function Home() {
               </a>
 
               <a
-                href="mailto:rcotrinate@gmail.com?subject=Contacto%20desde%20tu%20portafolio&body=Hola%20Rodrigo,%0D%0A%0D%0AQuisiera%20ponerme%20en%20contacto%20contigo%20para%20conversar%20sobre%20una%20oportunidad%20o%20consulta.%0D%0A%0D%0ASaludos,"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=rcotrinate@gmail.com&su=Contacto%20-%20Portafolio%20RCT&body=Hola%20Rodrigo%2C"
                 className="hover:text-white transition"
                 aria-label="Correo"
               >
