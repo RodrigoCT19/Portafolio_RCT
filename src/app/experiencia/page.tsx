@@ -185,7 +185,7 @@ export default function ExperienciaPage() {
           <div className="grid gap-6">
             {experience.map((e) => (
               <Reveal key={e.title}>
-                <article className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:shadow-lg">
+                <article className="rounded-3xl border border-zinc-200 bg-white p-5 sm:p-6 shadow-sm transition hover:shadow-lg">
                   <p className="text-sm font-semibold" style={{ color: ACCENT }}>
                     {e.date}
                   </p>
@@ -249,8 +249,9 @@ export default function ExperienciaPage() {
           </div>
 
           {/* PANEL */}
-          <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <div className="flex items-center justify-between gap-4">
+          <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-5 sm:p-6 shadow-sm">
+            {/* En móvil: columna. En sm+: fila como antes */}
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
               <div>
                 <p className="text-sm font-extrabold text-zinc-900">
                   {certifications[activeCert].title}
@@ -260,11 +261,12 @@ export default function ExperienciaPage() {
                 </p>
               </div>
 
+              {/* Botón: en móvil ocupa el ancho para que no rompa el layout */}
               <a
                 href={certLinks[certifications[activeCert].title]}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-semibold text-zinc-700 transition hover:border-[#3191A6] hover:text-[#3191A6]"
+                className="inline-flex w-full items-center justify-center gap-1 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-2 text-xs font-semibold text-zinc-700 transition hover:border-[#3191A6] hover:text-[#3191A6] sm:w-auto sm:py-1"
               >
                 Ver certificados completos <span aria-hidden>↗</span>
               </a>
@@ -274,7 +276,7 @@ export default function ExperienciaPage() {
               {certifications[activeCert].items.map((it) => (
                 <li
                   key={it.name}
-                  className="flex items-start justify-between gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3"
+                  className="flex flex-col gap-2 rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4"
                 >
                   <span className="text-sm font-semibold text-zinc-800">
                     {it.name}

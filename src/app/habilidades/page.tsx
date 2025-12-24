@@ -57,7 +57,7 @@ const skills: Skill[] = [
 
   // DB
   { name: "SQL Server", level: "Intermedio", group: "Base de datos", highlights: ["Consultas", "Modelado"] },
-  { name: "SQLite", level: "Intermedio", group: "Base de datos", highlights: ["Relacional", "Proyectos pequeños", "Local"]},
+  { name: "SQLite", level: "Intermedio", group: "Base de datos", highlights: ["Relacional", "Proyectos pequeños", "Local"] },
   { name: "Firebase", level: "Básico", group: "Base de datos", highlights: ["Firestore", "Auth"] },
 
   // Tools
@@ -145,7 +145,7 @@ const groups: Array<{
 function LevelChip({ level }: { level: Level }) {
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold ring-1 ${levelMeta[level].pill}`}
+      className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] sm:text-xs font-semibold ring-1 ${levelMeta[level].pill}`}
     >
       <span className={`h-2 w-2 rounded-full ${levelMeta[level].dot}`} />
       {level}
@@ -157,11 +157,11 @@ function SkillTile({ s }: { s: Skill }) {
   const meta = levelMeta[s.level];
 
   return (
-    <div className="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+    <div className="group rounded-2xl border border-zinc-200 bg-white p-4 sm:p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="truncate text-base font-semibold text-zinc-900">{s.name}</p>
-          <p className="mt-1 text-sm text-zinc-600">{s.group}</p>
+          <p className="truncate text-sm sm:text-base font-semibold text-zinc-900">{s.name}</p>
+          <p className="mt-1 text-xs sm:text-sm text-zinc-600">{s.group}</p>
         </div>
         <LevelChip level={s.level} />
       </div>
@@ -178,7 +178,7 @@ function SkillTile({ s }: { s: Skill }) {
           {s.highlights.slice(0, 3).map((t) => (
             <span
               key={t}
-              className="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700"
+              className="rounded-full bg-zinc-100 px-3 py-1 text-[11px] sm:text-xs text-zinc-700"
             >
               {t}
             </span>
@@ -209,20 +209,30 @@ function AccordionSection({
       <button
         type="button"
         onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-6"
+        // Responsive: más compacto en móviles sin cambiar el layout general
+        className="flex w-full items-start justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6 sm:py-5 text-left"
       >
-        <div className="flex items-start gap-4">
-          <span className="grid h-12 w-12 place-items-center rounded-2xl border border-zinc-200 bg-zinc-50 text-zinc-800">
+        <div className="flex min-w-0 items-start gap-3 sm:gap-4">
+          {/* Responsive: icono ligeramente más pequeño en móviles */}
+          <span className="grid h-10 w-10 sm:h-12 sm:w-12 shrink-0 place-items-center rounded-2xl border border-zinc-200 bg-zinc-50 text-zinc-800">
             {icon}
           </span>
-          <div>
-            <p className="text-lg font-extrabold text-zinc-900">{title}</p>
-            <p className="mt-1 text-sm text-zinc-600">{desc}</p>
+
+          <div className="min-w-0">
+            <p className="text-base sm:text-lg font-extrabold text-zinc-900 leading-snug">
+              {title}
+            </p>
+
+            {/* Responsive: evita que la descripción empuje/rompa feo en pantallas pequeñas */}
+            <p className="mt-1 text-sm text-zinc-600 leading-snug sm:leading-normal break-words">
+              {desc}
+            </p>
           </div>
         </div>
 
+        {/* Responsive: botón de flecha más compacto en móviles */}
         <span
-          className={`grid h-10 w-10 place-items-center rounded-xl border border-zinc-200 bg-zinc-50 text-zinc-700 transition ${
+          className={`grid h-9 w-9 sm:h-10 sm:w-10 shrink-0 place-items-center rounded-xl border border-zinc-200 bg-zinc-50 text-zinc-700 transition ${
             open ? "rotate-180" : "rotate-0"
           }`}
           aria-hidden
@@ -244,7 +254,9 @@ function AccordionSection({
           open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden px-5 pb-6 sm:px-6">{children}</div>
+        <div className="overflow-hidden px-4 pb-5 sm:px-6 sm:pb-6">
+          {children}
+        </div>
       </div>
     </div>
   );
@@ -267,36 +279,35 @@ export default function HabilidadesPage() {
       <main className="min-h-screen bg-zinc-100 text-zinc-900">
         {/* HERO */}
         <section className="relative overflow-hidden">
-          <div className="mx-auto max-w-6xl px-4 pt-28 pb-10 sm:pt-32">
+          <div className="mx-auto max-w-6xl px-4 pt-28 pb-8 sm:pt-32 sm:pb-10">
             <Reveal>
               <p className="text-sm font-semibold tracking-wide text-zinc-500">
                 Stack & Skills
               </p>
 
-              <h1 className="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">
+              <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-5xl">
                 Habilidades
               </h1>
 
-              <p className="mt-4 max-w-2xl text-zinc-600">
+              <p className="mt-3 max-w-2xl text-zinc-600 sm:mt-4">
                 Una vista clara, bonita y ordenada de mis herramientas: lo que ya domino y lo que sigo reforzando.
               </p>
 
               <div
-                className="mt-6 h-[3px] w-24 rounded-full"
+                className="mt-5 h-[3px] w-24 rounded-full sm:mt-6"
                 style={{ backgroundColor: "#3191A6" }}
               />
             </Reveal>
           </div>
         </section>
 
-
-        {/* BENTO (3 cards iguales) */}
-        <section className="mx-auto max-w-6xl px-4 pb-10">
-          <div className="grid gap-4 md:grid-cols-3 items-stretch">
+        {/* BENTO */}
+        <section className="mx-auto max-w-6xl px-4 pb-8 sm:pb-10">
+          <div className="grid gap-4 sm:gap-5 md:grid-cols-3 items-stretch">
             <Reveal>
-              <div className="h-full rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm flex flex-col">
+              <div className="h-full rounded-3xl border border-zinc-200 bg-white p-4 sm:p-6 shadow-sm flex flex-col">
                 <p className="text-sm font-semibold" style={{ color: ACCENT }}>Enfoque</p>
-                <p className="mt-2 text-2xl font-extrabold text-zinc-900">Web + UX</p>
+                <p className="mt-2 text-lg sm:text-2xl font-extrabold text-zinc-900">Web + UX</p>
                 <p className="mt-2 text-sm text-zinc-600">
                   Me importa que la UI se vea bien y se sienta rápida al usar.
                 </p>
@@ -304,9 +315,9 @@ export default function HabilidadesPage() {
             </Reveal>
 
             <Reveal>
-              <div className="h-full rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm flex flex-col">
+              <div className="h-full rounded-3xl border border-zinc-200 bg-white p-4 sm:p-6 shadow-sm flex flex-col">
                 <p className="text-sm font-semibold" style={{ color: ACCENT }}>Fortalezas</p>
-                <p className="mt-2 text-2xl font-extrabold text-zinc-900">WordPress + Figma</p>
+                <p className="mt-2 text-lg sm:text-2xl font-extrabold text-zinc-900">WordPress + Figma</p>
                 <p className="mt-2 text-sm text-zinc-600">
                   Prototipo, diseño y ejecuto sitios orientados a negocio.
                 </p>
@@ -314,14 +325,15 @@ export default function HabilidadesPage() {
             </Reveal>
 
             <Reveal>
-              <div className="h-full rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm flex flex-col">
+              <div className="h-full rounded-3xl border border-zinc-200 bg-white p-4 sm:p-6 shadow-sm flex flex-col">
                 <p className="text-sm font-semibold" style={{ color: ACCENT }}>Ahora mejorando</p>
 
+                {/* Responsive: chips más compactos en móviles */}
                 <div className="mt-3 flex flex-wrap gap-2">
                   {improvingNow.map((x) => (
                     <span
                       key={x}
-                      className="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700 border border-zinc-200"
+                      className="rounded-full bg-zinc-100 px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs text-zinc-700 border border-zinc-200"
                     >
                       {x}
                     </span>
@@ -332,15 +344,14 @@ export default function HabilidadesPage() {
                   Subiendo nivel con práctica constante y proyectos reales.
                 </p>
 
-                {/* empuja para que esta card no “crezca” visualmente por contenido */}
                 <div className="mt-auto" />
               </div>
             </Reveal>
           </div>
         </section>
 
-        {/* ACORDEÓN POR ÁREAS */}
-        <section className="mx-auto max-w-6xl px-4 pb-16">
+        {/* ACORDEÓN */}
+        <section className="mx-auto max-w-6xl px-4 pb-14 sm:pb-16">
           <div className="grid gap-4">
             {groups.map((g) => {
               const list = grouped.get(g.key) ?? [];

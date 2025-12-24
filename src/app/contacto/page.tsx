@@ -95,7 +95,13 @@ export default function ContactoPage() {
     <PageTransition>
       <section className="relative min-h-screen pt-28 sm:pt-32 overflow-x-hidden">
         {/* Fondo estilo Inicio */}
-        <Image src="/fondo.jpg" alt="Fondo" fill priority className="pointer-events-none object-cover opacity-30" />
+        <Image
+          src="/fondo.jpg"
+          alt="Fondo"
+          fill
+          priority
+          className="pointer-events-none object-cover opacity-30"
+        />
         <div className="pointer-events-none absolute inset-0 bg-black/70" />
 
         <div className="relative mx-auto w-full max-w-6xl px-2 sm:px-4 pb-16 overflow-x-hidden">
@@ -112,18 +118,18 @@ export default function ContactoPage() {
           <div className="mt-10 grid w-full min-w-0 gap-6 lg:grid-cols-2">
             {/* CARD: Datos */}
             <Reveal>
-              <div className="w-full min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.05] p-5 sm:p-6 shadow-2xl shadow-black/30 backdrop-blur">
+              <div className="w-full min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.05] p-4 sm:p-6 shadow-2xl shadow-black/30 backdrop-blur">
                 <h2 className="text-xl font-bold text-white">Mis canales</h2>
                 <p className="mt-2 text-sm text-white/70">Respondo más rápido por estos medios.</p>
 
-                <div className="mt-6 space-y-4">
+                <div className="mt-6 space-y-3 sm:space-y-4">
                   {/* Correo */}
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=rcotrinate@gmail.com&su=Contacto%20-%20Portafolio%20RCT&body=Hola%20Rodrigo%2C"
-                    className="group flex w-full flex-col gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white/85 transition hover:border-white/20 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                    className="group flex w-full flex-col gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-3 text-white/85 transition hover:border-white/20 sm:px-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                   >
                     <div className="flex min-w-0 items-center gap-3">
-                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/5">
+                      <span className="grid h-9 w-9 sm:h-10 sm:w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/5">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="opacity-90">
                           <path d="M4 6h16v12H4V6Z" stroke="currentColor" strokeWidth="1.8" />
                           <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.8" />
@@ -131,7 +137,10 @@ export default function ContactoPage() {
                       </span>
 
                       <span className="min-w-0">
-                        <span className="block truncate font-semibold">rcotrinate@gmail.com</span>
+                        {/* En móvil: break-all para evitar desborde. En sm+: truncate como antes */}
+                        <span className="block font-semibold text-sm sm:text-base break-all sm:break-normal sm:truncate">
+                          rcotrinate@gmail.com
+                        </span>
                         <span className="block text-xs text-white/55 sm:hidden">Correo</span>
                       </span>
                     </div>
@@ -146,10 +155,10 @@ export default function ContactoPage() {
                     href="https://wa.me/51932142423?text=Hola%20Rodrigo%2C"
                     target="_blank"
                     rel="noreferrer"
-                    className="group flex w-full flex-col gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white/85 transition hover:border-white/20 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                    className="group flex w-full flex-col gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-3 text-white/85 transition hover:border-white/20 sm:px-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                   >
                     <div className="flex min-w-0 items-center gap-3">
-                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/5">
+                      <span className="grid h-9 w-9 sm:h-10 sm:w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/5">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="opacity-90">
                           <path
                             d="M7.5 4.5c.9-1 2.4-.9 3.2.2l1.2 1.6c.6.8.5 1.9-.2 2.6l-1.1 1.1c1 1.9 2.6 3.5 4.5 4.5l1.1-1.1c.7-.7 1.8-.8 2.6-.2l1.6 1.2c1.1.8 1.2 2.3.2 3.2l-.7.7c-.8.8-1.9 1.2-3.1 1-7.2-1.3-12.8-6.9-14.1-14.1-.2-1.2.2-2.3 1-3.1l.7-.7Z"
@@ -161,7 +170,9 @@ export default function ContactoPage() {
                       </span>
 
                       <span className="min-w-0">
-                        <span className="block truncate font-semibold">(+51) 932142423</span>
+                        <span className="block font-semibold text-sm sm:text-base break-all sm:break-normal sm:truncate">
+                          (+51) 932142423
+                        </span>
                         <span className="block text-xs text-white/55 sm:hidden">Celular</span>
                       </span>
                     </div>
@@ -176,15 +187,15 @@ export default function ContactoPage() {
                     href="https://www.linkedin.com/in/rodrigo-cotrinat/"
                     target="_blank"
                     rel="noreferrer"
-                    className="group flex w-full flex-col gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-white/85 transition hover:border-white/20 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                    className="group flex w-full flex-col gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-3 text-white/85 transition hover:border-white/20 sm:px-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                   >
                     <div className="flex min-w-0 items-center gap-3">
-                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/5">
+                      <span className="grid h-9 w-9 sm:h-10 sm:w-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/5">
                         <span className="text-sm font-bold opacity-90">in</span>
                       </span>
 
                       <span className="min-w-0">
-                        <span className="block truncate font-semibold">LinkedIn</span>
+                        <span className="block truncate font-semibold text-sm sm:text-base">LinkedIn</span>
                         <span className="block text-xs text-white/55 sm:hidden">Abrir</span>
                       </span>
                     </div>
@@ -217,7 +228,7 @@ export default function ContactoPage() {
 
             {/* CARD: Form con EmailJS */}
             <Reveal>
-              <div className="w-full min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.05] p-5 sm:p-6 shadow-2xl shadow-black/30 backdrop-blur">
+              <div className="w-full min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.05] p-4 sm:p-6 shadow-2xl shadow-black/30 backdrop-blur">
                 <h2 className="text-xl font-bold text-white">Envíame un mensaje</h2>
                 <p className="mt-2 text-sm text-white/70">Déjame un mensaje y me pondré en contacto contigo :D</p>
 
@@ -266,7 +277,7 @@ export default function ContactoPage() {
                     name="name"
                     required
                     placeholder="Tu nombre"
-                    className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white placeholder:text-white/40 outline-none transition focus:border-white/25"
+                    className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm sm:text-base text-white placeholder:text-white/40 outline-none transition focus:border-white/25"
                   />
 
                   <input
@@ -274,10 +285,10 @@ export default function ContactoPage() {
                     type="email"
                     required
                     placeholder="Tu correo"
-                    className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white placeholder:text-white/40 outline-none transition focus:border-white/25"
+                    className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm sm:text-base text-white placeholder:text-white/40 outline-none transition focus:border-white/25"
                   />
 
-                  {/* ✅ Textarea más pequeño + ✅ límite + ✅ contador */}
+                  {/* Textarea + límite + contador */}
                   <div className="space-y-2">
                     <textarea
                       name="message"
@@ -291,7 +302,7 @@ export default function ContactoPage() {
                       maxLength={MAX_MESSAGE_CHARS}
                       rows={4}
                       placeholder="Cuéntame qué necesitas..."
-                      className="w-full h-18 resize-none rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white placeholder:text-white/40 outline-none transition focus:border-white/25"
+                      className="w-full resize-none rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm sm:text-base text-white placeholder:text-white/40 outline-none transition focus:border-white/25"
                     />
 
                     <div className="flex items-center justify-between text-xs text-white/55">

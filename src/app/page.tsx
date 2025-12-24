@@ -123,7 +123,7 @@ export default function Home() {
             <div className="mx-auto w-full max-w-[360px] lg:mx-0 lg:max-w-none">
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-white/5 shadow-2xl ring-1 ring-white/10
                 lg:h-[clamp(380px,30vw,460px)] lg:w-[clamp(320px,24vw,380px)] lg:aspect-auto">
-                <Image src="/foto.jpg" alt="Foto de Rodrigo" fill className="object-cover" />
+                <Image src="/Foto.png" alt="Foto de Rodrigo" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -135,28 +135,50 @@ export default function Home() {
       <section id="sobre-mi" className="bg-zinc-200 text-zinc-900">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
-            <Reveal>
-              <div className="relative h-[500px] w-full overflow-hidden rounded-2xl bg-zinc-300">
-                <Image src="/sobre-mi.jpg" alt="Sobre mí" fill className="object-cover" />
-              </div>
-            </Reveal>
+            
+            {/* TEXTO: primero en móvil, segundo en md+ */}
+            <div className="order-1 md:order-2">
+              <Reveal>
+                <div className="text-center md:text-center lg:text-left">
+                  <h2 className="text-3xl font-bold">Sobre Mi</h2>
 
-            <Reveal>
-              {/* ✅ Centrado en móvil/tablet, izquierda en desktop */}
-              <div className="text-center md:text-center lg:text-left">
-                <h2 className="text-3xl font-bold">Sobre Mi</h2>
+                  <div className="mt-3 h-px w-40 mx-auto bg-zinc-500/40 lg:mx-0 lg:w-full" />
 
-                {/* ✅ Línea centrada en móvil/tablet, completa en desktop */}
-                <div className="mt-3 h-px w-40 mx-auto bg-zinc-500/40 lg:mx-0 lg:w-full" />
+                  <div
+                    className="mt-6 mx-auto max-w-[38ch] md:max-w-[42ch] lg:mx-0 lg:max-w-none
+                    text-sm md:text-[20px] leading-relaxed text-zinc-700
+                    text-center lg:text-justify space-y-3"
+                  >
+                    <p>
+                      Soy estudiante de Ingeniería de Sistemas de 23 años, cursando el último ciclo de la carrera, 
+                      con interés en el desarrollo web y en la creación de soluciones tecnológicas que aporten 
+                      valor real.
+                    </p>
 
-                {/* ✅ Texto centrado en móvil/tablet con ancho controlado */}
-                <p className="mt-6 text-lg font-semibold leading-relaxed mx-auto max-w-[38ch] md:max-w-[42ch] lg:mx-0 lg:max-w-none">
-                  Estudiante de Ingeniería de Sistemas con interés en desarrollo web, redes y soluciones tecnológicas.
-                  Experiencia en proyectos académicos y soporte en plataformas web, con sólida formación en redes,
-                  seguridad y herramientas digitales. Orientado al aprendizaje continuo y a la mejora de procesos mediante tecnología.
-                </p>
-              </div>
-            </Reveal>
+                    <p>
+                      Me caracterizo por ser una persona empática, responsable y respetuosa, con fortalezas como
+                      el compañerismo, la creatividad y la capacidad de adaptarme con facilidad a nuevos entornos
+                      y retos.
+                    </p>
+
+                    <p>
+                      En mi tiempo libre disfruto ver películas o series, salir a pasear y compartir momentos con
+                      amigos, actividades que equilibran mi desarrollo personal y profesional.
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* IMAGEN: segunda en móvil, primera en md+ */}
+            <div className="order-2 md:order-1">
+              <Reveal>
+                <div className="relative h-[500px] w-full overflow-hidden rounded-2xl bg-zinc-300">
+                  <Image src="/sobre-mi.jpg" alt="Sobre mí" fill className="object-cover" />
+                </div>
+              </Reveal>
+            </div>
+
           </div>
         </div>
 
@@ -164,6 +186,7 @@ export default function Home() {
           © 2025 Rodrigo Cotrina Temple - Todos los derechos reservados.
         </div>
       </section>
+
     </PageTransition>
   );
 }
