@@ -253,7 +253,7 @@ export default function ProyectosPage() {
 
         {/* Footer igual */}
         <div className="relative bg-black py-6 text-center text-sm text-cyan-300/80">
-          © 2025 Rodrigo Cotrina Temple - Todos los derechos reservados.
+          © 2026 Rodrigo Cotrina Temple - Todos los derechos reservados.
         </div>
       </section>
     </PageTransition>

@@ -380,7 +380,7 @@ export default function HabilidadesPage() {
 
         {/* FOOTER */}
         <footer className="bg-black py-6 text-center text-sm" style={{ color: "rgba(49,145,166,.85)" }}>
-          © 2025 Rodrigo Cotrina Temple - Todos los derechos reservados.
+          © 2026 Rodrigo Cotrina Temple - Todos los derechos reservados.
         </footer>
       </main>
     </PageTransition>

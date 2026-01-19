@@ -74,8 +74,10 @@ type CertGroup = {
 const certifications: CertGroup[] = [
   {
     title: "CERTIFICADOS DIGITALES",
-    subtitle: "Cisco Networking Academy",
+    subtitle: "Cisco Networking Academy | Netzun",
     items: [
+      { name: "Power BI Avanzado", date: "Ene 2026" },
+      { name: "Power BI Básico", date: "Ene 2026" },
       { name: "Introducción a la Ciberseguridad (PCC 2025)", date: "Dic 2025" },
       { name: "CyberOps Associate", date: "Feb 2025" },
       { name: "Operating Systems Basics", date: "Ene 2025" },
@@ -292,7 +294,7 @@ export default function ExperienciaPage() {
 
         {/* FOOTER */}
         <footer className="bg-black py-6 text-center text-sm text-cyan-300/80">
-          © 2025 Rodrigo Cotrina Temple - Todos los derechos reservados.
+          © 2026 Rodrigo Cotrina Temple - Todos los derechos reservados.
         </footer>
       </main>
     </PageTransition>
