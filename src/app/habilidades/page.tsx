@@ -63,6 +63,7 @@ const skills: Skill[] = [
   // Tools
   { name: "GitHub", level: "Intermedio", group: "Dev & Tools", highlights: ["Versionado", "PRs"] },
   { name: "WordPress", level: "Avanzado", group: "Dev & Tools", highlights: ["Elementor", "Plugins", "Optimización"] },
+  { name: "Power BI", level: "Avanzado", group: "Dev & Tools", highlights: ["DAX", "Modelado", "Dashboards"],},
 
   // UX/UI
   { name: "Figma", level: "Avanzado", group: "UX/UI", highlights: ["UI", "Prototipos", "Flujos"] },
@@ -272,7 +273,7 @@ export default function HabilidadesPage() {
     return map;
   }, []);
 
-  const improvingNow = ["React", "Tailwind", "TypeScript", "Node.js"];
+  const improvingNow = ["React", "Tailwind", "TypeScript", "Node.js", "Power BI"];
 
   return (
     <PageTransition>
