@@ -150,7 +150,7 @@ export default function Home() {
                     text-center lg:text-justify space-y-3"
                   >
                     <p>
-                      Soy estudiante de Ingeniería de Sistemas de 23 años, cursando el último ciclo de la carrera, 
+                      Soy estudiante de Ingeniería de Sistemas de 23 años, recientemente egresado de la carrera, 
                       con interés en el desarrollo web y en la creación de soluciones tecnológicas que aporten 
                       valor real.
                     </p>

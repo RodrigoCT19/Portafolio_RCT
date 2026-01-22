@@ -15,12 +15,29 @@ type Project = {
   role?: string;
   features: string[];
   links?: { label: string; href: string }[];
-  preview: string; // <-- imagen en /public
+  preview: string;
 };
 
 const ACCENT = "#2D8497";
 
 const projects: Project[] = [
+  {
+    title: "Ztrack",
+    subtitle: "Sistema de gestión de estudiantes y notas",
+    description:
+      "Aplicación web Full Stack para la gestión de estudiantes y sus notas/exámenes, con un flujo claro de CRUD y visualización detallada por estudiante.",
+    stack: ["React", "FastAPI", "MongoDB", "Tailwind", "Vite"],
+    role: "Full Stack",
+    features: [
+      "CRUD completo de estudiantes",
+      "Visualización de notas/exámenes por estudiante",
+      "API REST documentada con Swagger",
+    ],
+    links: [
+      { label: "Repositorio", href: "https://github.com/RodrigoCT19/Ztrack.git" },
+    ],
+    preview: "/projects/Ztrack.png",
+  },
   {
     title: "Sistema de Reciclaje Interno",
     subtitle: "Proyecto académico – optimización de procesos",
