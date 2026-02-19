@@ -21,7 +21,22 @@ type ExpItem = {
 
 const experience: ExpItem[] = [
   {
-    date: "2024 - 2025",
+    date: "2026 feb",
+    title: "Programador Junior",
+    company: "ZGroup",
+    location: "Lima, Perú",
+    description:
+      "Mejora y optimización de la plataforma web ZTrack, fortaleciendo su funcionamiento interno y la experiencia administrativa, además del desarrollo de un sistema de nóminas automatizado.",
+    highlights: [
+      "Implementación de módulos de Avisos y Consultas con gestión de estados y notificaciones",
+      "Optimización del panel administrativo y flujo de gestión de comunicaciones",
+      "Desarrollo de sistema de nóminas en Python con cálculo automático de sueldos, descuentos y bonos",
+      "Mejoras en validación de datos, persistencia y exportación de reportes",
+    ],
+    tech: ["React", "Vite", "Node.js", "TypeScript", "SQLite", "Python", "SMTP", "Git" ],
+  },
+  {
+    date: "2025 Abr - 2026 Ene",
     title: "Practicante / Desarrollador Web",
     company: "Consultora de Asesoría Empresarial JB",
     location: "Lima, Perú",
