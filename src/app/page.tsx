@@ -102,8 +102,8 @@ export default function Home() {
               </p>
 
               <p className="mt-5 max-w-xl text-white/75">
-                Estudiante de Ingeniería de Sistemas con interés en desarrollo web, redes
-                y soluciones tecnológicas. Experiencia en soporte y mejoras de plataforma web
+                Bachiller en Ingeniería de Sistemas con interés en desarrollo web, redes
+                y soluciones tecnológicas. Experiencia en soporte y mejora de plataformas web
                 corportativa, con enfoque en UX, procesos internos y aprendizaje continuo.
               </p>
 
@@ -150,9 +150,17 @@ export default function Home() {
                     text-center lg:text-justify space-y-3"
                   >
                     <p>
-                      Soy estudiante de Ingeniería de Sistemas de 23 años, recientemente egresado de la carrera, 
-                      con interés en el desarrollo web y en la creación de soluciones tecnológicas que aporten 
-                      valor real.
+                      Soy{" "}
+                      <a
+                        href="/bachiller.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#2BBBCA" }}
+                        className="font-semibold hover:underline"
+                      >
+                        bachiller en Ingeniería de Sistemas
+                      </a>{" "}
+                      de 24 años, recientemente egresado de la carrera, con interés en el desarrollo web y en la creación de soluciones tecnológicas que aporten valor real.
                     </p>
 
                     <p>

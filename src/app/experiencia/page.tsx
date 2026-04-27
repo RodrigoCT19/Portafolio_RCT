@@ -21,6 +21,21 @@ type ExpItem = {
 
 const experience: ExpItem[] = [
   {
+    date: "2026 Mar - Abr",
+    title: "Coordinador Técnico de Mesa",
+    company: "Oficina Nacional de Procesos Electorales (ONPE)",
+    location: "Lima, Perú",
+    description:
+      "Coordinación, capacitación y soporte a miembros de mesa para asegurar el correcto desarrollo del proceso electoral, garantizando el cumplimiento de protocolos establecidos.",
+    highlights: [
+      "Capacitación y orientación a miembros de mesa sobre procedimientos electorales",
+      "Supervisión del correcto desarrollo de la jornada electoral en campo",
+      "Resolución de incidencias operativas bajo presión y en tiempo real",
+      "Coordinación con equipos y cumplimiento estricto de normativas oficiales",
+    ],
+    tech: ["Gestión de procesos", "Trabajo en equipo", "Resolución de problemas", "Comunicación efectiva"],
+  },
+  {
     date: "2026 feb",
     title: "Programador Junior",
     company: "ZGroup",
