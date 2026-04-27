@@ -152,7 +152,7 @@ export default function Home() {
                     <p>
                       Soy{" "}
                       <a
-                        href="/bachiller.pdf"
+                        href="/Bachiller.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#2BBBCA" }}
