@@ -21,6 +21,26 @@ type ExpItem = {
 
 const experience: ExpItem[] = [
   {
+    date: "2026 May - Jun",
+    title: "Auxiliar de Recursos Humanos",
+    company: "Oficina Nacional de Procesos Electorales (ONPE)",
+    location: "Lima, Perú",
+    description:
+      "Soporte en la gestión administrativa del personal durante el proceso electoral, incluyendo registro y validación de información, control documentario y apoyo en la gestión de contratos, asegurando el cumplimiento de los procesos internos del área de Recursos Humanos.",
+    highlights: [
+      "Registro y validación de información del personal electoral",
+      "Control y organización de documentación administrativa",
+      "Apoyo en la gestión de contratos y procesos de RR.HH.",
+      "Coordinación con distintas áreas para cumplimiento de procesos internos"
+    ],
+    tech: [
+      "Gestión administrativa",
+      "Control documentario",
+      "Trabajo en equipo",
+      "Comunicación efectiva"
+    ],
+  },
+  {
     date: "2026 Mar - Abr",
     title: "Coordinador Técnico de Mesa",
     company: "Oficina Nacional de Procesos Electorales (ONPE)",
