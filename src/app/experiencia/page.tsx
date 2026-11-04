@@ -21,6 +21,26 @@ type ExpItem = {
 
 const experience: ExpItem[] = [
   {
+    date: "2026 Ago - Octubre",
+    title: "Asistente de Oficina",
+    company: "Oficina Nacional de Procesos Electorales (ONPE)",
+    location: "Lima, Perú",
+    description:
+      "Soporte en la gestión administrativa y documentaria de la ODPE durante las Elecciones Regionales y Municipales 2026. Elaboración y seguimiento de documentos institucionales, consolidación de información y coordinación con las distintas áreas para el cumplimiento de las actividades del proceso electoral.",
+    highlights: [
+      "Elaboración y revisión de oficios, memorandos e informes institucionales",
+      "Gestión, organización y seguimiento de documentación administrativa",
+      "Consolidación y actualización de información mediante Excel",
+      "Coordinación con las áreas operativas y administrativas de la ODPE"
+    ],
+    tech: [
+      "Microsoft Excel",
+      "Control documentario",
+      "Análisis de información",
+      "Coordinación administrativa"
+    ],
+  },
+  {
     date: "2026 May - Jun",
     title: "Auxiliar de Recursos Humanos",
     company: "Oficina Nacional de Procesos Electorales (ONPE)",
