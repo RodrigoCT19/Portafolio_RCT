@@ -102,9 +102,11 @@ export default function Home() {
               </p>
 
               <p className="mt-5 max-w-xl text-white/75">
-                Bachiller en Ingeniería de Sistemas con interés en desarrollo web, redes
-                y soluciones tecnológicas. Experiencia en soporte y mejora de plataformas web
-                corportativa, con enfoque en UX, procesos internos y aprendizaje continuo.
+                Soy Ingeniero de Sistemas con interés en desarrollo web, redes
+                y soluciones tecnológicas. Tengo experiencia en soporte y mejora de
+                plataformas web corporativas, y me gusta crear soluciones
+                prácticas que faciliten el trabajo y mejoren la experiencia
+                de los usuarios.
               </p>
 
               <div className="mt-7 flex justify-center lg:justify-start">
@@ -152,26 +154,32 @@ export default function Home() {
                     <p>
                       Soy{" "}
                       <a
-                        href="/Bachiller.pdf"
+                        href="/Titulo-RCT.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "#2BBBCA" }}
                         className="font-semibold hover:underline"
                       >
-                        bachiller en Ingeniería de Sistemas
-                      </a>{" "}
-                      de 24 años, recientemente egresado de la carrera, con interés en el desarrollo web y en la creación de soluciones tecnológicas que aporten valor real.
+                        Ingeniero de Sistemas
+                      </a>{""}
+                       , con especial interés en el desarrollo web y en encontrar
+                        soluciones tecnológicas útiles para las personas. Disfruto
+                        aprender cosas nuevas, mejorar mis habilidades y asumir
+                        proyectos que me permitan seguir creciendo profesionalmente.
                     </p>
 
                     <p>
-                      Me caracterizo por ser una persona empática, responsable y respetuosa, con fortalezas como
-                      el compañerismo, la creatividad y la capacidad de adaptarme con facilidad a nuevos entornos
-                      y retos.
+                      Me considero una persona responsable, empática y creativa.
+                      Me gusta trabajar en equipo, compartir ideas y dar
+                      soluciones. Siempre trato de adaptarme a nuevos retos
+                      y dar lo mejor de mí en lo que hago.
                     </p>
 
                     <p>
-                      En mi tiempo libre disfruto ver películas o series, salir a pasear y compartir momentos con
-                      amigos, actividades que equilibran mi desarrollo personal y profesional.
+                      Fuera del ámbito profesional, disfruto ver películas y series,
+                      salir a pasear y pasar tiempo con mis amigos. Valoro esos
+                      momentos porque me permiten desconectarme, disfrutar
+                      y mantener un equilibrio en mi día a día.
                     </p>
                   </div>
                 </div>
